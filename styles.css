@@ -14,9 +14,12 @@ header {
 }
 
 main{
-    margin-top: 20px;
     height: 90vh;
     display: grid;
     justify-items: center;
+}
+
+.gameboard-container{
+    margin-top: 20px;
 }
 
