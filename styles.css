@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+header {
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 10vh;
+}
+
+main{
+    margin-top: 20px;
+    height: 90vh;
+    display: grid;
+    justify-items: center;
+}
+
