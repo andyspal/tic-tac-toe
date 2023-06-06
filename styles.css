@@ -1,25 +1,90 @@
 * {
     box-sizing: border-box;
 }
-body{
-    background-color: black;
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-header {
+
+header,
+footer {
     padding: 20px;
-    font-size: 1.5rem;
     display: flex;
     justify-content: center;
-    color: white;
+    align-items: center;
     height: 10vh;
 }
 
-main{
-    height: 90vh;
-    display: grid;
-    justify-items: center;
+header h2,
+footer h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(0, 255, 225);
+    letter-spacing: 0.05rem;
 }
 
-.gameboard-container{
+main {
     margin-top: 20px;
+    height: 60vh;
+    display: grid;
+    place-items: center;
 }
 
+.gameboard-container {
+    width: 300px;
+    height: 300px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    background-color: transparent;
+    border: 1px solid rgb(201, 244, 255);
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+/* select all cells from first row */
+.row:first-child .cell {
+    border-top: none;
+}
+
+/* select all cells from last row */
+.row:last-child .cell {
+    border-bottom: none;
+}
+
+/* select from all rows the first cell */
+.row .cell:first-child {
+    border-left: none;
+}
+
+/* select from all rows the last cell */
+.row .cell:last-child {
+    border-right: none;
+}
+
+.players {
+    color: honeydew;
+    display: block;
+    height: 10vh;
+}
+
+.hide {
+    display: none;
+}
+
+.result{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 1.5rem;
+}
