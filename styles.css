@@ -20,24 +20,35 @@ footer {
 }
 
 header h2,
-footer h2 {
+footer a {
     font-family: 'Amatic SC', cursive;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: rgb(0, 255, 225);
     letter-spacing: 0.05rem;
 }
-
+a{
+    text-decoration: none;
+    transition: all 0.1s;
+}
+a:hover{
+    transform: scale(1.05);
+}
+a:active{
+    color: rgb(214, 255, 255);
+}
 main {
     margin-top: 20px;
-    height: 60vh;
     display: grid;
     place-items: center;
+    gap: 40px;
 }
 
 .gameboard-container {
-    width: 300px;
-    height: 300px;
+    width: 375px;
+    height: 375px;
+    display: grid;
+    place-items: center;
 }
 
 .row {
@@ -47,9 +58,9 @@ main {
 .cell {
     background-color: transparent;
     border: 1px solid rgb(201, 244, 255);
-    width: 100px;
-    height: 100px;
-    font-size: 2.5rem;
+    width: 125px;
+    height: 125px;
+    font-size: 3.5rem;
     padding-bottom: 10px;
     font-family: 'Hachi Maru Pop', cursive;
 }
@@ -84,7 +95,68 @@ main {
     display: none;
 }
 
-.result{
+.result {
     font-family: 'Hachi Maru Pop', cursive;
     font-size: 1.5rem;
 }
+
+@media only screen and (max-width:768px) {
+    main{
+        gap: 30px;
+        padding: 30px;
+    }
+    header h2,
+    footer a {
+        font-size: 2.5rem;
+
+    }
+    .cell {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+ 
+
+    }
+    .result{
+        font-size: 1rem;
+    }
+    .gameboard-container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    body{
+        gap: 10px;
+    }
+    main{
+        padding: 10px;
+    }
+    header, footer{
+        padding: 20px;
+    }
+    header h2,
+    footer a {
+        font-size: 2rem;
+        height: 20px;
+
+    }
+    .cell {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
+ 
+
+    }
+    .gameboard-container {
+        width: 270px;
+        height: 270px;
+    }
+    .result {
+        padding-top: 20px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
